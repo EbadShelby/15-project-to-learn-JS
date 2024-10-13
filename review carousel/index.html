@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>review</title>
+  </head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+
+    html,
+    body {
+      min-height: 100vh;
+    }
+
+    body {
+      line-height: 1.5;
+      text-rendering: optimizeSpeed;
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      vertical-align: middle;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    p {
+      overflow-wrap: break-word;
+      /* max-width: 75ch; */
+      text-wrap: pretty; /*prevent alone words*/
+      line-height: 1.5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      overflow-wrap: break-word;
+      line-height: 1.1;
+      text-wrap: balance;
+    }
+    body {
+      display: grid;
+      place-content: center;
+      background-color: rgb(230, 230, 230);
+    }
+    main {
+      background-color: whitesmoke;
+      padding: 2em;
+      border-radius: .5em;
+    }
+    .card {
+      text-align: center;
+    }
+    .profile-picture {
+      width: 6em;
+      border-radius: 100vmax;
+      margin-inline: auto;
+      aspect-ratio: 1/1;
+      background-color: skyblue;
+    }
+    .arrows {
+      display: flex;
+      justify-content: center;
+    }
+    .arrow {
+      font-size: 2rem;
+      color: darkblue;
+    }
+    .button {
+      padding: .25em .5em;
+      border: 2px solid darkblue;
+      border-radius: .5em;
+      background-color: skyblue;
+    }
+  </style>
+  <body>
+    <main>
+      <h1>Our Reviews</h1>
+      <div class="card">
+        <div class="profile-picture"></div>
+        <p class="name"></p>
+        <p class="job"></p>
+        <p class="description"></p>
+        <div class="arrows">
+          <div class="arrow"><</div>
+          <div class="arrow">></div>
+        </div>
+        <button class="button">Surprise Me</button>
+      </div>
+    </main>
+  </body>
+</html>
