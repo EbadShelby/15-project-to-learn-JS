@@ -63,10 +63,76 @@
         line-height: 1.1;
         text-wrap: balance;
       }
+      body {
+        font-family: sans-serif;
+        background-color: whitesmoke;
+        display: grid;
+        place-content: center;
+        text-align: center;
+      }
+      .heading {
+        font-size: 3rem;
+      }
+      .number {
+        font-size: 4rem;
+        color: green;
+        font-weight: 600;
+      }
+      .button {
+        padding: 0.25em 0.5em;
+        border: 2px solid black;
+        border-radius: 0.25em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.15s;
+      }
+      .button:hover {
+        background-color: darkred;
+        color: whitesmoke;
+        opacity: 0.9;
+      }
+      .button:active {
+        opacity: 0.8;
+        background-color: darkred;
+        color: whitesmoke;
+      }
+      .button:nth-child(2) {
+        margin-inline: 0.5em;
+      }
     </style>
   </head>
   <body>
+    <main class="main">
+      <h1 class="heading">Counter</h1>
+      <p class="number js-number">0</p>
+      <div class="buttons">
+        <button class="button js-button" data-action="decrease">
+          decrease
+        </button>
+        <button class="button js-button" data-action="reset">reset</button>
+        <button class="button js-button" data-action="increase">
+          increase
+        </button>
+      </div>
+    </main>
+    <script>
+      const numberDisplay = document.querySelector(".js-number");
+      const buttons = document.querySelectorAll(".js-button");
+      let number = 0;
 
-    <script></script>
+      buttons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+          const action = event.currentTarget.dataset.action;
+
+          if (action === "decrease") number--;
+          if (action === "increase") number++;
+          if (action === "reset") number = 0;
+
+          numberDisplay.style.color = number < 0 ? "red" : "green";
+          numberDisplay.textContent = number;
+        });
+      });
+    </script>
   </body>
 </html>
