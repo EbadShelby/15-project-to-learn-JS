@@ -66,6 +66,7 @@
     }
     body {
       display: grid;
+      text-align: center;
       place-content: center;
       background-color: rgb(230, 230, 230);
     }
@@ -82,7 +83,6 @@
       border-radius: 100vmax;
       margin-inline: auto;
       aspect-ratio: 1/1;
-      background-color: skyblue;
     }
     .arrows {
       display: flex;
@@ -103,10 +103,14 @@
     <main>
       <h1>Our Reviews</h1>
       <div class="card">
-        <div class="profile-picture"></div>
-        <p class="name"></p>
-        <p class="job"></p>
-        <p class="description"></p>
+        <img class="profile-picture" src="./jinwoo.jpg" alt="profile" />
+        <p class="name">Jinwoo</p>
+        <p class="job">Web Developer</p>
+        <p class="review">
+          I've been using this product for over a year now and I'm incredibly
+          impressed with its performance. It's streamlined my workflow and
+          helped me achieve better results. Highly recommended!
+        </p>
         <div class="arrows">
           <div class="arrow"><</div>
           <div class="arrow">></div>
@@ -115,11 +119,48 @@
       </div>
     </main>
     <script>
-      let reviews = {
-        name: "Susan Smith",
-        job: "Web Developer",
-        review: " ",
-      };
+      let reviews = [
+        {
+          profile: "./jinwoo.png",
+          name: "jinwoo",
+          job: "Web Developer",
+          review:
+            "I've been using this product for over a year now and I'm incredibly impressed with its performance. It's streamlined my workflow and helped me achieve better results. Highly recommended!",
+        },
+        {
+          profile: "./luffy.png",
+          name: "Luffy",
+          job: "Digital Marketer",
+          review:
+            "This tool has been a game-changer for my marketing campaigns. The analytics and insights it provides are invaluable. I've seen a significant increase in engagement and conversions since I started using it.",
+        },
+        {
+          profile: "./firefox_q9Nkh2pFiU.png",
+          name: "Shadow",
+          job: "Graphic Designer",
+          review:
+            "As a graphic designer, I need a tool that can handle complex projects and deliver high-quality results. This software has exceeded my expectations. The features and capabilities are top-notch.",
+        },
+        {
+          profile: "./images232423.jpg",
+          name: "Naruto",
+          job: "Product Manager",
+          review:
+            "I've been using this platform for our product development process and it's been a great asset. The collaboration tools and project management features have made our team more efficient and productive.",
+        },
+        {
+          profile: "./firefox_cOdUsBnoS1.png",
+          name: "Ayano",
+          job: "Customer Support Representative",
+          review:
+            "I use this software to manage our customer support interactions, and it's been a lifesaver. The customer relationship management features have helped us improve our response times and overall customer satisfaction.",
+        },
+      ];
+
+      let profile = document.querySelector(".profile-picture").innerHTML;
+      let name = document.querySelector(".name").innerHTML;
+      let job = document.querySelector(".job").innerHTML;
+      let review = document.querySelector(".review").innerHTML;
     </script>
   </body>
 </html>
